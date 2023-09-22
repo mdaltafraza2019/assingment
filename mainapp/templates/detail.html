@@ -1,0 +1,36 @@
+{% extends 'home.html' %}
+{% load crispy_forms_tags %}
+{% block title %}<title>Detail</title>{% endblock %}
+{% block body %}
+<div class="row">
+    <div class="col-md-6 mx-auto mt-2">
+        <h2 class="bg-dark text-light text-center p-2">All Users</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Picture</th>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Email</th>
+                <th></th>
+                <th></th>
+            </tr>
+            {% for i in user %}
+            <tr>
+                <td>
+                    {% if i.pic %}
+                    <img src="{{ i.pic.url }}" height="100px" alt="{{ i.name }}'s Picture">
+                    {% else %}
+                    No Image
+                    {% endif %}
+                </td>
+                <td>{{ i.name }}</td>
+                <td>{{ i.dob }}</td>
+                <td>{{ i.email }}</td>
+                <td><a href="{%url 'edit' i.id%}" class="btn bg-dark-subtle">edit</a></td>
+                <td><a href="{%url 'delete' i.id%}"class="btn bg-danger-subtle">delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%block title%}<title>Document</title>{%endblock%}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Assingment</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="{%url 'home'%}">Home</a>
+                    <a class="nav-link" href="{%url 'add'%}">Add user</a>
+                    <a class="nav-link" href="{%url 'detail'%}">User details</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    {%block body%}
+    <div class="container bg-dark-subtle mt-3 p-4">
+        <div>
+            <h3>Assingment</h3>
+            <p>
+                Requirements
+                **Exercise 1: Setting Up a Simple Web Page **
+                
+                Interns should create a basic HTML/CSS web page with the following components:
+                
+                Header with a title and navigation menu.
+                A main content area with some text.
+                A footer with contact information.
+                Exercise 2: Creating a Python Web Server
+                
+                Interns should create a Python web server using a framework of their choice (e.g., Flask, Django). The server should:
+                
+                Serve the HTML/CSS page created in Exercise 1.
+                Handle a GET request and respond with the page.
+                Include appropriate routing.
+                **Exercise 3: Adding Dynamic Content **
+                
+                Interns should enhance the web page created on Exercise 1 by adding dynamic content. This should involve:
+                
+                Creating a Python function or route that generates dynamic content (e.g., date/time, random quotes, weather information).
+                Incorporating this dynamic content into the web page using templating (if applicable to the chosen framework).
+                Exercise 4: Form Handling
+                
+                Interns should create a form on the web page to collect user data. This exercise should involve:
+                
+                Adding a form with input fields for user details (e.g., name, email).
+                Creating a Python route to handle form submissions and display the submitted data.
+                Exercise 5: Data Persistence
+                
+                Interns should enhance the form handling from Exercise 4 by incorporating data persistence. This may involve:
+                
+                Storing form submissions in a database or a file.
+                Creating a Python route to retrieve and display the stored data on a separate page..</p>
+        </div>
+    </div>
+    {%endblock%}
+    <div class="footer navbar bg-dark border-bottom border-body  px-5" data-bs-theme="dark">
+          <div class="div text-capitalize ">
+            <h3  class="text-light  text-capitalize ">Contact information</h3>
+          <p class="text-light  text-capitalize">mob-9570001260</p>
+          <p class="text-light  text-capitalize">email-mdaltafraza2019@gmail.com</p>
+         <p class="text-light  text-capitalize ms-auto">@copyright altaf raza</p>
+          </div>
+         
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

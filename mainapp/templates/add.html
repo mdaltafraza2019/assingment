@@ -1,0 +1,16 @@
+{%extends 'home.html'%}
+{% load crispy_forms_tags%}
+{% block title%} <title>add</title>{%endblock%}
+{%block body%}
+<div class="row">
+    <div class="col-md-6 mx-auto mt-2">
+        <h2 class="bg-dark text-light text-center p-2">Add User</h2>
+        <form action="" method="post" class="bg-dark-subtle p-2" enctype="multipart/form-data">
+            {%csrf_token%}
+            {{form|crispy}}
+            <button type="submit" class="btn bg-dark text-light text-center p-2 w-100">Add</button>
+        
+        </form>
+    </div>
+</div>
+{%endblock%}
